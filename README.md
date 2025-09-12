@@ -1,1 +1,3 @@
 # ComputerScience-ITU
+
+This is the repository used by MSc Computer Science student @thor2818 and secretary BSc Software Dev student @zntheory ...
