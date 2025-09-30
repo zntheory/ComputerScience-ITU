@@ -16,12 +16,11 @@ for i in range(1, no_plates + 1):
     plate_weight = plates[i - 1]
 
     for w in range(0, max_weight + 1):
-        drop = table[i-1][w]
         take = False
         if plate_weight <= w:
             take = table[i - 1][w - plate_weight]
 
-        table[i][w] = drop | take
+        table[i][w] = table[i-1][w] | take
 
 intended_weight = 1000
 
