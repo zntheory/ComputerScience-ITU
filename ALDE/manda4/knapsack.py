@@ -2,7 +2,7 @@
 
 def opt_backtrack(items, c):
     n = len(items)
-    table = [[0 for _ in range(c + 1)] for _ in range(n)]
+    table = [[0 for _ in range(c + 1)] for _ in range(n + 1)]
 
     # opt
     for i in range(1, n + 1):
@@ -18,7 +18,7 @@ def opt_backtrack(items, c):
     w = c
     for i in range(n, 0, -1):
         if table[i][w] != table[i-1][w]:
-            chosen_indices.append(i)
+            chosen_indices.append(i - 1)
             w -= items[i - 1][1]
 
     return len(chosen_indices), chosen_indices
